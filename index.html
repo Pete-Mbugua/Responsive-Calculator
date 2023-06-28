@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="function.js"></script>
+  <style>
+     body {
+      background-image: url('OIP.jpeg');
+      background-repeat: repeat;
+    }
+    .calculator {
+      width: 300px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f5f5f5;
+      margin: 0 auto;
+    }
 
+    .calculator input {
+      width: 100%;
+      margin-bottom: 10px;
+      height: 50px;
+    }
+
+    .calculator .row {
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body class="w3-black">
+  <div class="calculator w3-card-2 w3-margin-top">
+    <input type="text" id="result" readonly class="w3-input w3-border-blue w3-card">
+    <div class="row">
+      <button class="button w3-padding w3-margin w3-green w3-card w3-border-0 w3-round w3-button" onclick="appendToResult('7')">7</button>
+      <button class="button w3-padding w3-margin w3-green w3-card w3-border-0 w3-round w3-button" onclick="appendToResult('8')">8</button>
+      <button class="button w3-padding w3-margin w3-green w3-card w3-border-0 w3-round w3-button" onclick="appendToResult('9')">9</button>
+      <button class="button w3-padding w3-margin w3-blue w3-card w3-border-0 w3-round w3-button" onclick="appendToResult('/')">/</button>
+    </div>
+    <div class="row">
+      <button class="button w3-padding w3-margin w3-green w3-card w3-border-0 w3-round w3-button" onclick="appendToResult('4')">4</button>
+      <button class="button w3-padding w3-margin w3-green w3-card w3-border-0 w3-round w3-button" onclick="appendToResult('5')">5</button>
+      <button class="button w3-padding w3-margin w3-green w3-card w3-border-0 w3-round w3-button" onclick="appendToResult('6')">6</button>
+      <button class="button w3-padding w3-margin w3-blue w3-card w3-border-0 w3-round w3-button" onclick="appendToResult('*')">*</button>
+    </div>
+    <div class="row">
+      <button class="button w3-padding w3-margin w3-green w3-card w3-border-0 w3-round w3-button" onclick="appendToResult('1')">1</button>
+      <button class="button w3-padding w3-margin w3-green w3-card w3-border-0 w3-round w3-button" onclick="appendToResult('2')">2</button>
+      <button class="button w3-padding w3-margin w3-green w3-card w3-border-0 w3-round w3-button" onclick="appendToResult('3')">3</button>
+      <button class="button w3-padding w3-margin w3-blue w3-card w3-border-0 w3-round w3-button" onclick="appendToResult('-')">-</button>
+    </div>
+    <div class="row">
+      <button class="button w3-padding w3-margin w3-green w3-card w3-border-0 w3-round w3-button" onclick="appendToResult('0')">0</button>
+      <button class="button w3-padding w3-margin w3-red w3-card w3-border-0 w3-round w3-button" onclick="clearResult()">C</button>
+      <button class="button w3-padding w3-margin w3-amber w3-card w3-border-0 w3-round w3-button" onclick="calculate()">=</button>
+      <button class="button w3-padding w3-margin w3-blue w3-card w3-border-0 w3-round w3-button" onclick="appendToResult('+')">+</button>
+    </div>
+  </div>
+</body>
+</html>
